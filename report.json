@@ -1,0 +1,199 @@
+[
+  {
+    "uri": "features/blog.feature",
+    "id": "blog-feature",
+    "keyword": "Feature",
+    "name": "Blog feature",
+    "description": "  Test functionality of blog post",
+    "line": 1,
+    "elements": [
+      {
+        "id": "blog-feature;blog-post-positive",
+        "keyword": "Scenario",
+        "name": "Blog post positive",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have logged in as a regular user",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/loggin_seps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 162058000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I can access my profile information",
+            "line": 6,
+            "output": [
+              "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZ3Jpc2JvbHN0ZWluc0B5b3BtYWlsLmNvbSIsImV4cCI6MTUzMDMwMDk5MX0.RqbfvR1V_Y2v_FWqH75Tk36oQVUv-H2-7MHYxBYDe2uMOAJVKd9E5AUjpua_6BN1fexW-OxJ86u8Z6NFon6mHg"
+            ],
+            "match": {
+              "location": "features/step_definitions/profile_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52551000
+            }
+          },
+          {
+            "keyword": "Given ",
+            "name": "I write post in a blog",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/blog_steps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70240000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I check if posted in a blog",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/blog_steps.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74958000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I change blog title",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/blog_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 166383000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/login.feature",
+    "id": "login-feature",
+    "keyword": "Feature",
+    "name": "Login feature",
+    "description": "  Test the functionality of login",
+    "line": 1,
+    "elements": [
+      {
+        "id": "login-feature;log-in---positive",
+        "keyword": "Scenario",
+        "name": "Log in - positive",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have logged in as a regular user",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/loggin_seps.rb:2"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128392000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I can access my profile information",
+            "line": 6,
+            "output": [
+              "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZ3Jpc2JvbHN0ZWluc0B5b3BtYWlsLmNvbSIsImV4cCI6MTUzMDMwMDk5Mn0.cSm-c96ps_U5nMs31LjAJGiDZBMO0uduTAs-B4v7xrDjNaKKeLxUcdnQeL3XHIaxwmV_-x46xpxcjLEpdEfBmg"
+            ],
+            "match": {
+              "location": "features/step_definitions/profile_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53777000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-feature;log-in---negative",
+        "keyword": "Scenario",
+        "name": "Log in - negative",
+        "description": "",
+        "line": 9,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I try to log in using invalid password",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/loggin_seps.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 144819000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I check if I am not logged in",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/loggin_seps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54418000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/sign-up.feature",
+    "id": "sign-up-feature",
+    "keyword": "Feature",
+    "name": "Sign up feature",
+    "description": "  This feature is used to test the sign-up functionality",
+    "line": 1,
+    "elements": [
+      {
+        "id": "sign-up-feature;sign-up-positive",
+        "keyword": "Scenario",
+        "name": "Sign-up positive",
+        "description": "",
+        "line": 4,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have signed up as a regular user",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/sign-up_steps.rb:2"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Sign up. failed!\n  Status code is not correct!\n  Expected : 200\n  Received : 400\n  Response received : {\"timestamp\":\"2018-06-19T19:36:32.545+0000\",\"status\":400,\"error\":\"Bad Request\",\"message\":\"Failed to add user agrisbolsteins@yopmail.com !\",\"path\":\"/api/sign-up\"}.\n<200> expected but was\n<400>. (Test::Unit::AssertionFailedError)\n./features/support/assert_helper.rb:2:in `assert_status_code'\n./features/endpoint_functions/sign_up.rb:17:in `sign_up_positive'\n./features/step_definitions/sign-up_steps.rb:3:in `/^I have signed up as a regular user$/'\nfeatures/sign-up.feature:5:in `Given I have signed up as a regular user'",
+              "duration": 61418000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
